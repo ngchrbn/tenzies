@@ -1,6 +1,17 @@
-function Die() {
+function Die(props) {
+
+    const styles = {
+        backgroundColor: props.isHeld ? "#59E391" : "white"
+    }
+
     return (
-        <main></main>
+        <div
+            onClick={props.holdDice}
+            className="die-face"
+            style={styles}
+            >
+                <h2 className="die-num">{props.value}</h2>
+            </div>    
     )
 }
 
